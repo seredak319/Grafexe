@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="731.0" prefWidth="1255.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jimp2.StartScreenController">
+   <children>
+      <Label contentDisplay="CENTER" layoutX="214.0" layoutY="32.0" prefHeight="55.0" prefWidth="94.0" text="Grafexe" textAlignment="RIGHT" wrapText="true">
+         <font>
+            <Font name="Agency FB" size="34.0" />
+         </font>
+      </Label>
+      <Button fx:id="StartButton" layoutX="341.0" layoutY="436.0" mnemonicParsing="false" onAction="#onClickButtonStart" prefHeight="36.0" prefWidth="84.0" text="Start">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="42.0" layoutY="110.0" prefHeight="17.0" prefWidth="192.0" text="Generowanie grafu">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="338.0" prefHeight="22.0" prefWidth="169.0" text="Wczytywanie grafu">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="ifGenerate" layoutX="161.0" layoutY="113.0" mnemonicParsing="false" onAction="#setIfGenerate" />
+      <CheckBox fx:id="ifRead" layoutX="153.0" layoutY="340.0" mnemonicParsing="false" onAction="#setIfRead" />
+      <TextField fx:id="FileNameGen" layoutX="112.0" layoutY="139.0" onMouseClicked="#clickFiledFileNameGenWhenWrong" />
+      <Label layoutX="28.0" layoutY="143.0" prefHeight="17.0" prefWidth="84.0" text="nazwa pliku:" />
+      <Label layoutX="28.0" layoutY="173.0" text="liczba wierszy:" />
+      <Label layoutX="27.0" layoutY="203.0" text="liczba kolumn:" />
+      <TextField fx:id="RowNum" layoutX="112.0" layoutY="169.0" onMouseClicked="#clickFiledRowNumWhenWrong" prefHeight="25.0" prefWidth="65.0" />
+      <TextField fx:id="ColNum" layoutX="112.0" layoutY="199.0" onMouseClicked="#clickFiledColNumWhenWrong" prefHeight="25.0" prefWidth="65.0" />
+      <Label layoutX="82.0" layoutY="237.0" text="Zakres wag:">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="263.0" text="od:" />
+      <Label layoutX="118.0" layoutY="263.0" text="do:" />
+      <TextField fx:id="FromBoundery" layoutX="61.0" layoutY="259.0" onMouseClicked="#clickFiledFromBounderyWhenWrong" prefHeight="25.0" prefWidth="46.0" />
+      <TextField fx:id="ToBoundery" layoutX="137.0" layoutY="259.0" onMouseClicked="#clickFiledToBounderyWhenWrong" prefHeight="25.0" prefWidth="46.0" />
+      <Label layoutX="29.0" layoutY="376.0" text="nazwa pliku:" />
+      <TextField fx:id="FileNameRead" layoutX="108.0" layoutY="372.0" onMouseClicked="#clickFiledFileNameReadWhenWrong" />
+      <Label layoutX="41.0" layoutY="437.0" text="Sprawdź spójność">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="ifBFS" layoutX="154.0" layoutY="437.0" mnemonicParsing="false" onAction="#setIfBFS" />
+      <Slider fx:id="HowMuchConnections" blockIncrement="1.0" layoutX="313.0" layoutY="196.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="50.0" />
+      <Label layoutX="302.0" layoutY="173.0" prefHeight="17.0" prefWidth="162.0" text="ilość generowanych połączeń" />
+      <CheckBox fx:id="IfConst" layoutX="306.0" layoutY="137.0" mnemonicParsing="false" onAction="#setIfConst" text="wszystkie połączenia" />
+      <Label fx:id="HowMuch" layoutX="481.0" layoutY="195.0" text="Label" />
+      <CheckBox fx:id="IfSave" layoutX="34.0" layoutY="303.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="94.0" text="zapisz plik" />
+      <Pane fx:id="myPane" layoutX="522.0" layoutY="65.0" prefHeight="655.0" prefWidth="716.0" style="-fx-border-color: black;" />
+      <TextArea fx:id="messages" layoutX="34.0" layoutY="547.0" prefHeight="151.0" prefWidth="429.0" />
+      <Label layoutX="38.0" layoutY="527.0" text="Komunikaty" />
+      <CheckBox fx:id="BFSresult" layoutX="522.0" layoutY="43.0" mnemonicParsing="false" text="Czy spójny?" />
+      <Button layoutX="1058.0" layoutY="39.0" mnemonicParsing="false" onAction="#cleanUp" prefHeight="25.0" prefWidth="71.0" text="Wyczyść" />
+      <Button layoutX="1138.0" layoutY="39.0" mnemonicParsing="false" onAction="#unselectNodes" prefHeight="25.0" prefWidth="71.0" text="Odznacz" />
+      <Label layoutX="623.0" layoutY="43.0" prefHeight="17.0" prefWidth="94.0" text="Wagi scieżek: " />
+      <Label fx:id="Weights" layoutX="701.0" layoutY="43.0" prefHeight="17.0" prefWidth="85.0" style="-fx-border-color: lightgrey;" />
+      <Button layoutX="978.0" layoutY="39.0" mnemonicParsing="false" onAction="#redrawActualGraph" prefHeight="25.0" prefWidth="71.0" text="Reset" />
+      <Label layoutX="815.0" layoutY="23.0" text="Łączna waga przejsc:" />
+      <Button layoutX="387.0" layoutY="523.0" mnemonicParsing="false" onAction="#cleanMessages" prefHeight="25.0" prefWidth="76.0" text="Wyczyść" />
+      <Label fx:id="Costs" layoutX="827.0" layoutY="42.0" prefHeight="19.0" prefWidth="85.0" style="-fx-border-color: lightgrey;" />
+   </children>
+</AnchorPane>
