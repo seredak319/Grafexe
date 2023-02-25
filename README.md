@@ -23,9 +23,7 @@ Grafexe was created as a project. First, functional and implementation specifica
 Then, using version control, new functionalities were added. The entire process of creating the program was controlled by the teacher.
 
 ### How to use the program?
-When generating a graph, you must provide the necessary information such as file name, graph size and weight range of generated connections. Then, by clicking on two vertices, the shortest path between them will be determined. What's more, we can load a graph located in the "data" directory, which should contain the following layout:
-
-
+When generating a graph, you must provide the necessary information such as file name, graph size and weight range of generated connections. Then, by clicking on two vertices, the shortest path between them will be determined. What's more, we can load a graph located in the "data" directory, which should contain a strictly defined layout, which we can preview after the first generation of our graph.
 
 ### What has the program taught me?
 Doing this project has undoubtedly taught me many new things. The first was the new Java programming language. The second important thing was to carefully plan the program, write the specification and then verify it in reality. In addition, while writing the algorithms used by the program, I had the opportunity to compare them with previously written algorithms in the C language. Due to two different implementations, I could see how the memory usage or the operation time changed with the same result. (BFS, Dijkstra and graph storage). A definite novelty for me was the graphical interface, which turned out to be a great help and incredibly satisfying fun. What's more, he taught me to "think for the user" to anticipate various scenarios and secure them properly:
